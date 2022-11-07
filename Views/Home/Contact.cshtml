@@ -1,0 +1,53 @@
+﻿@model CalorieCount.Models.Message
+
+@{
+    ViewBag.Title = "Contact";
+}
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center"> CONTACT</h2>
+    <div class="row">
+        <div class="col-sm-5">
+            <p>Please contact us here and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Glasgow, Scotland</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +44 1231231231</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> contacthere@caloriecount.com</p>
+        </div>
+        @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+    <div class="col-sm-7 slideanim">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row">
+            <div class="col-sm-6 form-group">
+
+                @Html.TextBoxFor(model => model.FullName, new { @placeholder = "Name", @class = "form-control", @id = "name" })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "tezt-danger" })
+            </div>
+            <div class="col-sm-6 form-group">
+                @Html.TextBoxFor(model => model.Email, new { @placeholder = "Email", @class = "form-control", @id = "email" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "tezt-danger" })
+            </div>
+        </div>
+        @Html.TextBoxFor(model => model.Comment, new { @placeholder = "Comment", @class = "form-control", @id = "comment" })
+        @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "tezt-danger" })
+        <br />
+        <div class="row">
+            <div class="col-sm-12 form-group">
+
+                <input type="submit" value="Send" class="btn btn-default pull-right" onclick="return ConfirmationDialog()" />
+            </div>
+
+            <script type="text/javascript">
+                function ConfirmationDialog() {
+                    if (confirm("Are you sure you want to continue?"))
+                        return true;
+                    else
+                        return false;
+                }
+            </script>
+        </div>
+    </div>
+            }
+    </div>
+</div>

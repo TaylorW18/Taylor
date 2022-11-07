@@ -1,0 +1,78 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+.bg-2 {
+    background-color: #180d98; /* Ultramarine */
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #F33131; /* Pomegranate */
+    color: #555555;
+}
+
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    width: auto;
+    height: 150px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+    .navbar nav li a:hover {
+        color: #5fbf42 !important; /* apple */
+    }
+
+/*unvisited link*/
+a:link {
+    color: #555555;
+    text-decoration: none;
+}
+
+/*visited link*/
+a:visited {
+    color: #555555;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #555555;
+    text-decoration: none;
+}
+
+/* selected link*/
+a:active {
+    color: #555555;
+    text-decoration: none;
+}
